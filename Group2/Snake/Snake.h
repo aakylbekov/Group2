@@ -44,4 +44,8 @@ public:
 		}
 		return false;
 	}
+	void clear() {
+		//"очистка" последнего элемента в консоли
+		body->back().draw(' ');
+	}
 };

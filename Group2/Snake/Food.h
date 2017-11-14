@@ -16,7 +16,7 @@ public:
 		body->draw(*sign);
 	}
 	void recreate() {
-		*this->body->x = rand() % 39 + 1;
-		*this->body->y = rand() % 39 + 1;
+		*this->body->x = rand() % 23 + 1;
+		*this->body->y = rand() % 23 + 1;
 	}
 };
