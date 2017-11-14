@@ -4,7 +4,6 @@ class Food {
 public:
 	Point *body;
 	char *sign;
-	static int cnt;
 	Food(short x, short y) {
 		body = new Point(x, y);
 		sign = new char('@');
@@ -19,7 +18,5 @@ public:
 	void recreate() {
 		*this->body->x = rand() % 39 + 1;
 		*this->body->y = rand() % 39 + 1;
-		++cnt;
 	}
 };
-int Food::cnt = 0;

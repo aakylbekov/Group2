@@ -3,6 +3,7 @@
 class Point {
 public:
 	short *x, *y;
+	Point() {}
 	Point(short x, short y) {
 		this->x = new short(x);
 		this->y = new short(y);
