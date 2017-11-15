@@ -2,12 +2,15 @@
 
 class Snake {
 public:
+	//объявление
 	vector<Point> *body;
 	char *sign;
 	Snake(short x, short y) {
 		sign = new char('*');
+		//инициализация
 		body = new vector<Point>();
 		body->reserve(100);
+		//добавление первой точки
 		body->push_back(*(new Point(x, y)));
 	}
 	~Snake() {
