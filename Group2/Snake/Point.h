@@ -16,6 +16,9 @@ public:
 		delete x;
 		delete y;
 	}
+	bool operator ==(Point& point) {
+		return *point.x == *this->x && *point.y == *this->y;
+	}
 	void draw(char sign) {
 		goToXY();
 		cout << sign;
