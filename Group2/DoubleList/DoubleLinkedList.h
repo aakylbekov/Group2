@@ -3,7 +3,7 @@
 // описание класса двусвязный список и 
 // прототипы его функции
 
-template <typename T>
+template <class T>
 class DoubleLinkedList
 {
 public:
@@ -11,5 +11,7 @@ public:
 	//пустой конструктор для создания двусвязного списка
 	DoubleLinkedList();
 	~DoubleLinkedList();
-	void add(const T &);
+	template<class T> void addToLast(const T &);
+	template<class T> void addToFirst(const T &);
+	//template<typename T> void show();
 };
