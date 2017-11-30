@@ -1,12 +1,19 @@
 #include "stdafx.h"
 #include "Item.h"
 
+template <typename T>
+Item<T>::Item()
+{
+	left = right = NULL;
+}
 
-Item::Item()
+template <typename T>
+Item<T>::~Item()
 {
 }
 
-
-Item::~Item()
+template<typename T>
+Item<T>::Item(const T &value) :Item()
 {
+	this->value = value;
 }

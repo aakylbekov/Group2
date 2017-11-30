@@ -7,5 +7,6 @@ public:
 	Item<T> *left, *right;
 	Item();
 	~Item();
+	Item(const T &);
 };
 
