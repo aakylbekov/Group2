@@ -7,11 +7,11 @@ template <class T>
 class DoubleLinkedList
 {
 public:
-	Node<T> *first, *last;
+	Node *first, *last;
 	//пустой конструктор для создания двусвязного списка
 	DoubleLinkedList();
 	~DoubleLinkedList();
-	template<class T> void addToLast(const T &);
-	template<class T> void addToFirst(const T &);
-	//template<typename T> void show();
+	void addToLast(const T &);
+	void addToFirst(const T &);
+	void show();
 };

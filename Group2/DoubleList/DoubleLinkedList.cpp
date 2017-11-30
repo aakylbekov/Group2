@@ -14,8 +14,8 @@ DoubleLinkedList<T>::~DoubleLinkedList()
 {
 }
 
-template<class T>
-void DoubleLinkedList::addToLast(const T &value)
+template<typename T>
+void DoubleLinkedList<T>::addToLast(const T &value)
 {
 	if (first == NULL) {
 		last = first = new Node<T>(value);
@@ -26,9 +26,9 @@ void DoubleLinkedList::addToLast(const T &value)
 		temp->prev = last;
 		last = temp;
 	}
-};
+}
 
-template<class T>
+template<typename T>
 void DoubleLinkedList<T>::addToFirst(const T &value)
 {
 	if (first == NULL) {
@@ -40,24 +40,24 @@ void DoubleLinkedList<T>::addToFirst(const T &value)
 		temp->next = first;
 		first = temp;
 	}
-};
+}
 
-//template<typename T>
-//void DoubleLinkedList<T>::show()
-//{
-//	if (first == NULL) {
-//		cout << "List is empty" << endl;
-//	}
-//	else {
-//		for (Node<T> *temp = first; temp != NULL; 
-//			temp = temp->next) {
-//			cout << temp->value << '\t';
-//		}
-//		cout << endl;
-//		/*Node<T> *temp = first;
-//		while (temp != NULL) {
-//			cout << temp->value << '\t';
-//			temp = temp->next;
-//		}*/
-//	}
-//}
+template<typename T>
+void DoubleLinkedList<T>::show()
+{
+	if (first == NULL) {
+		cout << "List is empty" << endl;
+	}
+	else {
+		for (Node<T> *temp = first; temp != NULL; 
+			temp = temp->next) {
+			cout << temp->value << '\t';
+		}
+		cout << endl;
+		/*Node<T> *temp = first;
+		while (temp != NULL) {
+			cout << temp->value << '\t';
+			temp = temp->next;
+		}*/
+	}
+}
