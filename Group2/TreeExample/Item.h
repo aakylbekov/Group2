@@ -1,12 +1,12 @@
 #pragma once
-template <typename T>
+//template <typename T>
 class Item
 {
 public:
-	T value;
-	Item<T> *left, *right;
+	int value;
+	Item *left, *right;
 	Item();
 	~Item();
-	Item(const T &);
+	Item(const int &);
 };
 
